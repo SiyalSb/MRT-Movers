@@ -1,54 +1,42 @@
-import React from "react";
-import "./Navbar.css";
+import React, { useEffect, useState } from 'react'
+import "./Navbar.css"
+import logo from '../../assets/logo.png'
+import menu_icon from '../../assets/menu-icon.png'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
-  return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-nav-css">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          MRT Movers
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-items">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Services
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Contact us
-              </a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-          </form>
-        </div>
-      </div>
-    </nav>
-  );
-};
+  const [sticky, setSticky] = useState(false)
 
-export default Navbar;
+  useEffect(()=>{
+    window.addEventListener('scroll', ()=>{
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+    })
+  },[])
+
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const toogleMenu = ()=>{
+    mobileMenu? setMobileMenu(false) : setMobileMenu(true)
+  }
+
+
+
+  return (
+    <nav className={` ${sticky? "dark-nav" : ""}`} >
+        <img src={logo} alt="logo" className='logo' />
+        <ul className={mobileMenu? "": "hide-mobile-menu"}>
+            <li><Link to="hero" smooth={true} offset={0} duration={500}>Home</Link></li>
+            <li> <Link to="about" smooth={true} offset={-150} duration={500}>About us</Link></li>
+          
+            <li><Link to="testimonials" smooth={true} offset={-260} duration={500}>Testimonials</Link></li>
+            <li><Link to="contact" smooth={true} offset={-260} duration={500} className='btn'>Contact us</Link></li>
+
+        </ul>
+
+
+
+        <img src={menu_icon} alt=""  className='menu-icon' onClick={toogleMenu}/>
+    </nav>
+  )
+}
+
+export default Navbar

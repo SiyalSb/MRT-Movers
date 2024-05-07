@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className='hero'>
       <div className='whatsapp-icon'>
-        <a href="#"><img src={whatsapp} alt="" /></a>
+        <a href="https://wa.me/923062611435"><img src={whatsapp} alt="" /></a>
       </div>
       
     </div>
