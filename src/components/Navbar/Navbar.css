@@ -1,0 +1,18 @@
+.nav-color{
+    background-color: rgb(124, 118, 118);
+}
+
+.search-btn{
+    background-color: rgb(124, 118, 118);
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+}
+
+.menu-items{
+    display: flex;
+    margin-left: 670px;
+    
+}
+
+
+
