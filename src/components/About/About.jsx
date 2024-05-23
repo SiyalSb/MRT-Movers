@@ -1,24 +1,13 @@
 import React from 'react'
 import "./About.css"
-import about_img from "../../assets/about.jpeg"
-import play_icon from "../../assets/play-icon.png"
+import about_img from "../../assets/about.jpg"
 
 const About = () => {
   return (
     <div className='about'>
-        <div className='about-left'>
-            <img src={about_img} alt=""  className='about-img'/>
-            
-
-        </div>
-        <div className='about-right'>
-            <h3>ABOUT MRT Movers</h3>
-            <h2>Transportation redefined</h2>
-           <p>MRT Movers has the largest mover network in the world combined with over 95 years of experience. Whether you are relocating long distance or locally, our global network ensures that no matter where you're going, Allied can get you home. As a full-service mover, we handle everything from packing, loading, transporting, and unpacking your belongings.
-
-Our mission is to provide affordable moving services backed by a name you can trust. We are a company built on a history of service, and it is our pleasure to assist you as you plan and prepare for your next move. Get your instant quote today!</p>
-        </div>
-
+        <h5>Welcome to MRT Movers and Packers</h5>
+        <h2>WE ARE PROFESSIONAL MOVERS AND PACKERS IN DUBAI</h2>
+       <p>Our moving company offers exceptional relocation services tailored to meet the diverse needs of residential and commercial clients. With a team of highly trained professionals, we ensure a smooth and stress-free moving experience. Our comprehensive services include expert packing, secure transportation, and efficient unpacking, all designed to protect your valuable possessions. We pride ourselves on reliability, punctuality, and a commitment to customer satisfaction, making us a trusted choice for those seeking seamless transitions to new homes or offices</p>
     </div>
   )
 }

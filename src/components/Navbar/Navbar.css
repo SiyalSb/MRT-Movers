@@ -13,8 +13,13 @@ nav {
 }
 
 .logo {
-  width: 130px;
+  width: 80px;
   margin-left: 5px;
+  border-radius: 10px;
+}
+
+nav span {
+  font-size: 40px;
 }
 
 nav ul li {
@@ -24,8 +29,23 @@ nav ul li {
   font-size: 16px;
 }
 
+.contact-btn {
+
+    background: #fff;
+    color: #212121;
+    padding: 8px 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dark-nav {
-  background: #52557a;
+  background: grey;
   transition: 0.5s;
 }
 
@@ -78,4 +98,17 @@ nav ul li {
     .hide-mobile-menu{
         right: -200px;
     }
+}
+
+@media (min-width: 1200px) {
+  nav span {
+    margin-left: -350px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  /* Your styles here */
+  body {
+      margin-left: -150px;
+  }
 }

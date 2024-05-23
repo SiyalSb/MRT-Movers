@@ -67,6 +67,9 @@
     color: #212EA0;
 }
 
+/* -------------------------------------- */
+
+
 @media (max-width: 800px){
     .testimonials{
         padding: 0 40px;
@@ -98,5 +101,11 @@
     }
     .slider p{
         font-size: 12px;
+    }
+}
+
+@media (max-width: 992px){
+    .slider{
+        
     }
 }
