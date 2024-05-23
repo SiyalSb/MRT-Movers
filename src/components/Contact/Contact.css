@@ -65,4 +65,14 @@
     }
 }
 
+@media (max-widt: 450px){
+  .contact-icons{
+    width: 20px;
+  }
+  .contact-col ul li {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+}
+
 
