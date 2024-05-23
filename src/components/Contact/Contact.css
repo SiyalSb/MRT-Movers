@@ -58,14 +58,14 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) and (min-width: 450px) {
     .contact-col ul li {
         font-size: 15px;
         font-weight: 300;
     }
 }
 
-@media (max-widt: 450px){
+@media (max-width: 450px){
   .contact-icons{
     width: 20px;
   }
